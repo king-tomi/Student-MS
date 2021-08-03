@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Lecturers {% endblock %}
+<link href="{% static 'css/lecturers.css' %}" rel="stylesheet">
+{% block content %}
+<h2>lecturers</h2>
+{% for lecturer in lecturers %}
+<table>
+    <th>first name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Department</th>
+    <th>Faculty</th>
+
+    <td>{{ lecturer.first_name }}</td>
+    <td>{{ lecturer.middle_name }}</td>
+    <td>{{ lecturer.last_name }}</td>
+    <td>{{ lecturer.department }}</td>
+    <td>{{ lecturer.faculty }}</td>
+</table>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Courses {% endblock %}
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+{% block content %}
+<h2>Courses</h2>
+{% for course in courses %}
+<table>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Unit</th>
+    
+    <td>{{ course.name }}</td>
+    <td>{{ course.code }}</td>
+    <td>{{ course.description }}</td>
+    <td>{{ course.unit }}</td>
+</table>
